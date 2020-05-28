@@ -13,8 +13,9 @@
         "removeComments": true,
         "suppressImplicitAnyIndexErrors": true,
         "lib": [ "es6", "dom" ],
-        "types" : ["node", "lodash", "mocha"]
-    },
+        "types" : ["node", "lodash", "mocha"],
+		"strict": false
+	},
     "include": [
         "src/**/*"
     ],
