@@ -14,7 +14,10 @@
 		"lint": "tslint src/*.ts",
 		"release": "standard-version",
 		"test": "rimraf .test && mocha --trace-warnings --timeout 30000 --exit dist/__test__",
-		"precommit": "lint-staged"
+		"precommit": "lint-staged",
+		"typecheck": "concurrently yarn:typecheck:*",
+		"typecheck:tsc": "tsc --noEmit",
+		"typecheck:strict": "ts-strictify"
 	},
 	"author": "Stanislav Panferov <fnight.m@gmail.com> (http://panferov.me/)",
 	"repository": {
@@ -56,6 +59,7 @@
 		"@types/webpack": "^4.4.0",
 		"bluebird": "^3.5.1",
 		"chai": "^4.1.2",
+		"concurrently": "5.2.0",
 		"empty-module": "0.0.2",
 		"fs-extra": "^6.0.1",
 		"husky": "^0.14.3",
@@ -67,6 +71,7 @@
 		"shelljs": "^0.7.8",
 		"standard-version": "^4.4.0",
 		"temp": "^0.8.3",
+		"ts-strictify": "1.6.0",
 		"tslint": "^5.10.0",
 		"typescript": "^2.9.1",
 		"webpack": "^4.12.0",
